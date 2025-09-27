@@ -1,6 +1,5 @@
 // src/components/layout/Footer.tsx
 import React from "react";
-import ThemeToggle from "./ThemeToggle";
 
 const Footer: React.FC = () => (
     <footer style={{
@@ -28,7 +27,7 @@ const Footer: React.FC = () => (
         <p style={{ marginTop: '8px', fontSize: '0.8rem' }}>
             Works offline • Fast loading • Installable
         </p>
-        <ThemeToggle />
+        
     </footer>
 );
 

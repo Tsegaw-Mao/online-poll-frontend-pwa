@@ -188,41 +188,8 @@ const PollList: React.FC = () => {
       maxWidth: '1200px',
       margin: '0 auto',
       minHeight: '80vh'
+      
     }}>
-      {/* Header */}
-      <header style={{
-        textAlign: 'center',
-        marginBottom: '40px',
-        padding: '20px 0'
-      }}>
-        <h1 style={{
-          fontSize: '2.5rem',
-          fontWeight: 'bold',
-          backgroundColor: currentCardStyle.backgroundColor,
-          color: currentCardStyle.textColor,
-          marginBottom: '8px'
-        }}>
-          Online Polls
-        </h1>
-        <p style={{
-          fontSize: '1.1rem',
-          backgroundColor: currentCardStyle.backgroundColor,
-          color: currentCardStyle.textColor,
-          marginBottom: '20px'
-        }}>
-          Vote on current polls and see real-time results
-        </p>
-        <div style={{
-          display: 'inline-block',
-          padding: '4px 12px',
-          backgroundColor: currentCardStyle.backgroundColor,
-          color: currentCardStyle.textColor,
-          borderRadius: '20px',
-          fontSize: '0.9rem'
-        }}>
-          {polls.length} poll{polls.length !== 1 ? 's' : ''} available
-        </div>
-      </header>
 
       {/* Create Poll Button for Authenticated Users */}
       {isAuthenticated() && (

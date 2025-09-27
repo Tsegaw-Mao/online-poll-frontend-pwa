@@ -150,39 +150,39 @@ npm run preview
 3. User Management - Manage user accounts and permissions
 
 ## 🔌 API Integration
-Pollify is designed to work with a RESTful backend API.
+- Pollify is designed to work with a RESTful backend API.
 
-📱 PWA Features
-Installation
-Desktop: Click install icon in address bar (Chrome/Edge)
+# 📱 PWA Features
+## Installation
+- ***Desktop***: Click install icon in address bar (Chrome/Edge)
 
-Mobile: "Add to Home Screen" from browser menu
+- ***Mobile***: "Add to Home Screen" from browser menu
 
-Automatic: Prompt appears after user engagement
+- ***Automatic***: Prompt appears after user engagement
 
-Offline Capabilities
-✅ View previously loaded polls offline
+## Offline Capabilities
+- ✅ View previously loaded polls offline
 
-✅ Cache static assets for fast loading
+- ✅ Cache static assets for fast loading
 
-✅ Queue actions when offline (sync when online)
+- ✅ Queue actions when offline (sync when online)
 
-✅ Service worker for resource management
+- ✅ Service worker for resource management
 
-Performance Optimizations
-🔄 Lazy loading of components
+## Performance Optimizations
+- 🔄 Lazy loading of components
 
-📦 Code splitting and tree shaking
+- 📦 Code splitting and tree shaking
 
-🖼️ Optimized image loading
+- 🖼️ Optimized image loading
 
-💾 Efficient caching strategies
+- 💾 Efficient caching strategies
 
-🎨 Customization
-Theming
-Customize colors by modifying CSS variables:
+- 🎨 Customization
+## Theming
+- Customize colors by modifying CSS variables:
 
-css
+```css
 :root {
   --primary-color: #2563eb;
   --secondary-color: #64748b;
@@ -196,140 +196,77 @@ css
   --background-primary: #111827;
   --text-primary: #f9fafb;
 }
-Adding New Chart Types
-Extend the visualization system in PollResults.tsx:
+```
 
-typescript
-import { RadialBarChart, Treemap } from 'recharts';
-
-const additionalCharts = (
-  <RadialBarChart data={chartData}>
-    {/* Chart configuration */}
-  </RadialBarChart>
-);
-🚀 Deployment
-Vercel/Netlify
-bash
+# 🚀 Deployment
+- Vercel
+```bash
 # Build command
 npm run build
-
 # Output directory: dist/
-Traditional Web Hosting
+# Traditional Web Hosting
 Run npm run build
 
-Upload dist/ folder to your web server
+# Upload dist/ folder to your web server
 
-Configure HTTPS (required for PWA)
+# Configure HTTPS (required for PWA)
 
-Set up proper caching headers
+# Set up proper caching headers
 
-Environment Variables
+# Environment Variables
 env
 VITE_API_URL=https://your-production-api.com
 VITE_APP_NAME=Pollify
 VITE_APP_DESCRIPTION=Real-time polling application
 VITE_APP_VERSION=1.0.0
-🤝 Contributing
+```
+
+## 🤝 Contributing
 We welcome contributions! Please see our contributing guidelines:
 
-Development Setup
-Fork the repository
+### Development Setup
+- Fork the repository
 
-Create a feature branch: git checkout -b feature/amazing-feature
+- Create a feature branch: git checkout -b feature/amazing-feature
 
-Commit changes: git commit -m 'Add amazing feature'
+- Commit changes: git commit -m 'Add amazing feature'
 
-Push to branch: git push origin feature/amazing-feature
+- Push to branch: git push origin feature/amazing-feature
 
-Open a pull request
+- Open a pull request
 
-Available Scripts
-bash
+### Available Scripts
+``` bash
 npm run dev          # Start development server
 npm run build        # Create production build
 npm run preview      # Preview production build
 npm run lint         # Run ESLint
 npm run type-check   # TypeScript type checking
 npm run test         # Run test suite
-📊 Performance
-Lighthouse Scores
-Category	Score	Description
-Performance	🟢 95+	Optimized loading
-Accessibility	🟢 100	WCAG compliant
-Best Practices	🟢 100	Modern standards
-SEO	🟢 100	Search optimized
-PWA	🟢 100	Full PWA features
-Optimization Features
-🔄 Code splitting with React.lazy()
+```
 
-🖼️ Image optimization and lazy loading
+## 📄 License
+This project is licensed under the ALX License - see the LICENSE file for details.
 
-📦 Bundle analysis and optimization
+## 🙏 Acknowledgments
+- `React` - The UI framework that powers everything
 
-💾 Efficient caching strategies
+- `Vite` - Fast build tool and dev server
 
-🚀 Preload critical resources
+- `Recharts` - Beautiful and composable charts
 
-🐛 Troubleshooting
-Common Issues
-PWA Installation Issues
+- `Workbox` - PWA tools and service workers
 
-Ensure HTTPS is enabled in production
+- `Django REST Framework` - Backend API framework
 
-Verify manifest.json configuration
-
-Check service worker registration
-
-API Connection Problems
-
-Confirm CORS configuration on backend
-
-Verify API URL in environment variables
-
-Check authentication token validity
-
-Build Errors
-
-Clear node_modules and reinstall dependencies
-
-Verify TypeScript compiler options
-
-Check for version conflicts
-
-Debug Mode
-Enable detailed logging:
-
-javascript
-localStorage.setItem('debug', 'true');
-// Refresh the page to see debug logs
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-React - The UI framework that powers everything
-
-Vite - Fast build tool and dev server
-
-Recharts - Beautiful and composable charts
-
-Workbox - PWA tools and service workers
-
-Django REST Framework - Backend API framework
-
-📞 Support
-Documentation: GitHub Wiki
-
-Issues: GitHub Issues
-
-Discussions: GitHub Discussions
-
-Email: support@pollify.app
+# 📞 Support
+Email: tsegawjohnj@gmail.com
 
 <div align="center">
 🎯 Live Demo
 👉 Try Pollify Live Demo
 
-Made with ❤️ by the Pollify Team
+Made with ❤️ by the ALX Team
 
 https://img.shields.io/github/stars/yourusername/pollify-pwa?style=social
 https://img.shields.io/twitter/follow/pollifyapp?style=social

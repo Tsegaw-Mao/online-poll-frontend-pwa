@@ -120,10 +120,10 @@ const CreatePoll: React.FC = () => {
 
   return (
     <div style={{
-      padding: '20px',
+      padding: '40px 20px 20px 20px', // Reduced top padding since header is fixed
       maxWidth: '600px',
       margin: '0 auto',
-      minHeight: '80vh'
+      minHeight: 'calc(100vh - 200px)'
     }}>
       {/* Breadcrumb */}
       <nav style={{ marginBottom: '24px' }}>
@@ -134,8 +134,7 @@ const CreatePoll: React.FC = () => {
             alignItems: 'center',
             gap: '8px',
             border: 'none',
-            backgroundColor: currentCardStyle.backgroundColor,
-            color: currentCardStyle.textColor,
+            color: '#2563eb',
             cursor: 'pointer',
             fontSize: '0.9rem'
           }}

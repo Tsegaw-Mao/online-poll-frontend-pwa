@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import InstallPrompt from './InstallPrompt';
 import { useAuth } from '../hooks/useAuth';
 import { useTheme } from '../hooks/useTheme';
@@ -39,6 +38,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const currentLayoutStyle = layoutStyles[theme];
+  const currentFooterStyle = footerStyles[theme];
+
+  // Calculate main content padding to account for fixed header
+  const headerHeight = '80px'; // Approximate height of the fixed header
 
   if (loading) {
     return (
@@ -75,13 +78,45 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       transition: 'background-color 0.3s ease, color 0.3s ease'
     }}>
       <Header />
+      
+      {/* Main content with padding to account for fixed header */}
       <main style={{ 
-        minHeight: 'calc(100vh - 200px)',
+        minHeight: `calc(100vh - ${headerHeight} - 100px)`, // Account for header and footer
+        paddingTop: headerHeight, // Push content down below fixed header
         transition: 'background-color 0.3s ease'
       }}>
         {children}
       </main>
-      <Footer />
+      
+      <footer style={{ 
+        padding: '20px', 
+        textAlign: 'center', 
+        color: currentFooterStyle.color,
+        borderTop: `1px solid ${currentFooterStyle.borderColor}`,
+        fontSize: '0.9rem',
+        backgroundColor: currentFooterStyle.backgroundColor,
+        transition: 'all 0.3s ease'
+      }}>
+        <p style={{ margin: 0 }}>
+          &copy; 2025 Online Poll System - 
+          <span style={{ 
+            display: 'inline-block',
+            padding: '2px 8px',
+            backgroundColor: theme === 'dark' ? '#1e40af' : '#dbeafe',
+            color: theme === 'dark' ? '#dbeafe' : '#1e40af',
+            borderRadius: '12px',
+            fontSize: '0.8rem',
+            marginLeft: '8px',
+            transition: 'all 0.3s ease'
+          }}>
+            {theme === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+          </span>
+        </p>
+        <p style={{ margin: '8px 0 0 0', fontSize: '0.8rem' }}>
+          Works offline • Fast loading • Installable
+        </p>
+      </footer>
+      
       <InstallPrompt />
     </div>
   );
