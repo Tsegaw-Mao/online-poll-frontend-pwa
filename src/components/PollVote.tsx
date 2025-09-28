@@ -39,11 +39,9 @@ const PollVote: React.FC = () => {
     setVoting(true);
     setError(null);
     try {
-      await api.post(ENDPOINTS.POLLS.VOTE, { 
-        poll_id: poll.id, 
-        option_id: selectedOption 
-      });
-      
+      const payload = { poll: poll.id, option: selectedOption };
+      await api.post(ENDPOINTS.POLLS.VOTE, payload);
+      alert("✅ Vote cast successfully!");
       // Redirect to results page after successful vote
       navigate(`/poll/${poll.id}/results`);
     } catch (err: any) {
