@@ -6,7 +6,7 @@ import type { Poll } from "../types/poll";
 import { useAuth } from "../hooks/useAuth";
 import { useMemo } from 'react';
 import { PollSkeleton } from './SkeletonLoader';
-import SearchBar from './SearchBar';
+//import SearchBar from './SearchBar';
 import { useNotifications } from '../hooks/useNotifications';
 import { useTheme } from '../hooks/useTheme';
 
@@ -130,7 +130,7 @@ const PollList: React.FC = () => {
       created_end: "",
     });
     setPage(1);
-    // Don't fetch immediately, let user click Apply
+   
   };
 
   if (loading) {

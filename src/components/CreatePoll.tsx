@@ -125,7 +125,7 @@ const CreatePoll: React.FC = () => {
       margin: '0 auto',
       minHeight: 'calc(100vh - 200px)'
     }}>
-      {/* Breadcrumb */}
+      {/* Nav */}
       <nav style={{ marginBottom: '24px' }}>
         <button
           onClick={() => navigate('/')}

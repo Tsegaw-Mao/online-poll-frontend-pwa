@@ -98,7 +98,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         transition: 'all 0.3s ease'
       }}>
         <p style={{ margin: 0 }}>
-          &copy; 2025 Online Poll System - 
+          &copy; 2025 🗳️ Pollify - 
           <span style={{ 
             display: 'inline-block',
             padding: '2px 8px',

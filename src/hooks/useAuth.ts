@@ -12,8 +12,8 @@ export const useAuth = () => {
       if (token && username) {
         // Verify token is still valid by making a simple API call
         try {
-          // You could make a simple API call here to verify token
-          // For now, we'll just set the user if token exists
+          // !!! Remember this later to make api calls here
+          // For now, this will set the user if token exists
           setUser({ id: 1, username });
         } catch (error) {
           // Token is invalid, clear storage

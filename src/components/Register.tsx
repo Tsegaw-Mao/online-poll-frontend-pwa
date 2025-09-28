@@ -70,7 +70,7 @@ const Register: React.FC = () => {
 
       setSuccess("Account created successfully! Redirecting to login...");
       
-      // Auto-login after successful registration
+      // Auto-login page after successfull registration
       setTimeout(() => {
         navigate("/login", { 
           state: { 

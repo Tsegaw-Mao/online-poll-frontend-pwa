@@ -136,7 +136,7 @@ const PollVote: React.FC = () => {
       maxWidth: '600px',
       margin: '0 auto'
     }}>
-      {/* Breadcrumb */}
+      {/* Navigation */}
       <nav style={{ marginBottom: '24px' }}>
         <button 
           onClick={() => navigate('/')}

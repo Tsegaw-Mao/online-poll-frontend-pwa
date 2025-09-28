@@ -11,7 +11,7 @@ export const DebugTest: React.FC = () => {
       try {
         setStatus('Making API request...');
         
-        // Use api.get instead of fetch
+        // Use api.get to test listing polls
         const result = await api.get('/api/polls/');
         
         console.log('API response status:', result.status);

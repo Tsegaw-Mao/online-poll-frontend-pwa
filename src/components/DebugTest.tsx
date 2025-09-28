@@ -12,7 +12,7 @@ export const DebugTest: React.FC = () => {
       try {
         setStatus('Making API request...');
         
-        // Use the correct endpoint from ENDPOINTS
+        // Testing ENDPOINTS FROM THE API
         const result = await api.get(ENDPOINTS.POLLS.LIST);
         
         console.log('API response status:', result.status);

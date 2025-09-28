@@ -149,7 +149,7 @@ const PollResults: React.FC = () => {
       margin: '0 auto',
       minHeight: '80vh'
     }}>
-      {/* Breadcrumb */}
+      {/* Navigation */}
       <nav style={{ marginBottom: '24px' }}>
         <button 
           onClick={() => navigate('/')}
