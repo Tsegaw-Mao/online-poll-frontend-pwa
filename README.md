@@ -205,7 +205,7 @@ npm run preview
 npm run build
 # Output directory: dist/
 # Traditional Web Hosting
-Run npm run build
+npm run build
 
 # Upload dist/ folder to your web server
 
